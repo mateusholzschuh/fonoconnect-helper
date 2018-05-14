@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fonoconnecthelper.fchController">
+   <children>
+      <SplitPane dividerPositions="0.2928679817905918" layoutX="210.0" layoutY="87.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5955056179775281" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <ListView fx:id="wordsListView" prefHeight="325.0" prefWidth="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="txtAreaConsole" layoutX="-26.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></TextArea>
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <StackPane layoutX="103.0" layoutY="172.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <StackPane fx:id="notification" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #90ee90; -fx-background-radius: 25px; -fx-border-radius: 25px;" visible="false" StackPane.alignment="BOTTOM_CENTER">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" />
+                           </StackPane.margin>
+                           <children>
+                              <Text fx:id="notificationText" fill="#00bc22" strokeType="OUTSIDE" strokeWidth="0.0" text="SALVO COM SUCESSO">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                           <children>
+                              <Text fx:id="word" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione uma palavra">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="phonemes" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <HBox fx:id="menuControls" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="4.0" visible="false">
+                                 <children>
+                                    <ComboBox fx:id="phonemesComboBox" prefWidth="150.0" />
+                                    <Button mnemonicParsing="false" onAction="#addPhoneme" text="Add" />
+                                    <Button mnemonicParsing="false" onAction="#removeLastPhoneme" text="←" />
+                                    <Button mnemonicParsing="false" onAction="#resetPhonemes" text="Resetar" />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="saveButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveModifications" prefHeight="30.0" prefWidth="80.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px;" text="SALVAR" visible="false" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
