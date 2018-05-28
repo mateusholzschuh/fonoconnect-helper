@@ -87,7 +87,7 @@ public class fchController implements Initializable {
         isSaved      = true;
         
         //Connect to the database
-        dbh = new FonoConnectDBHelper("jdbc:sqlite:teste.db");
+        dbh = new FonoConnectDBHelper("jdbc:sqlite:database.db");
 
         //Load the words from database
         wordsList = dbh.getWords();
