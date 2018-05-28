@@ -1,6 +1,6 @@
 /*
  * @FonoConnectHelper :: main
- * version: b11.4.18
+ * version: b27.5.18
  */
 package fonoconnecthelper;
 
@@ -24,7 +24,7 @@ public class FonoConnectHelper extends Application {
         
         Scene scene = new Scene(root);
         
-        stage.setTitle("FonoConnectHelper - version: b11.4.18 @ Mateus");
+        stage.setTitle("FonoConnectHelper - version: b27.5.18 @ Mateus");
         
         stage.setScene(scene);
         stage.show();

@@ -1,6 +1,6 @@
 /*
  * - FonoConnectHelper  -
- *  v.: 1.0 - b11.4.2018
+ *  v.: 1.0 - b27.5.2018
  */
 package fonoconnecthelper;
 
