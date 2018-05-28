@@ -9,8 +9,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,6 +36,10 @@ public class fchController implements Initializable {
     //Words list - ListView
     @FXML
     ListView<String> wordsListView;
+    
+    //Make HTML report btn
+    @FXML
+    Button mkHTML;
     
     //Console Log
     @FXML
@@ -211,6 +213,12 @@ public class fchController implements Initializable {
             handleNotification("Erro ao salvar", !ok);
         }
         isSaved = ok;
+    }
+    
+    /*      Make HTML Report     */
+    @FXML
+    public void makeReport() throws IOException {
+        Reporter.makeHTML();
     }
 
     

@@ -48,7 +48,7 @@ public class FonoConnectDBHelper {
     private final String READ_WORDPHONEMES = "SELECT * FROM " + TABLE_WORDPHONEME_NAME + ";";
     private final String READ_PHONEMES     = "SELECT * FROM " + TABLE_PHONEME_NAME + ";";
     private final String READ_PHONEME      = "SELECT * FROM " + TABLE_PHONEME_NAME + " WHERE " + TABLE_PHONEME_ID + " = ? ;";
-    private final String READ_WORDS        = "SELECT * FROM " + TABLE_WORD_NAME + ";";
+    private final String READ_WORDS        = "SELECT * FROM " + TABLE_WORD_NAME + " ORDER BY " + TABLE_WORD_WORD+ ";";
     private final String READ_WORD         = "SELECT * FROM " + TABLE_WORD_NAME + " WHERE " + TABLE_WORD_ID + " = ? ;";
     private final String READ_PHONEMES_IN_WORD = "SELECT p." + TABLE_PHONEME_ID + " AS PHONID, p." + TABLE_PHONEME_PHONEME + " AS PHONPHON "
                    + "FROM " + TABLE_WORDPHONEME_NAME + " wp "
